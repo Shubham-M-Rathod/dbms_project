@@ -1,0 +1,35 @@
+<%- include('header') %>
+<!-- <h2>This is Some Heading</h2> -->  
+<div>
+  <form action="/action" method="post" id="home_form">
+    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+    <div class="in">
+      <% for (var i =1; i <=100;  i++ ) { %>
+      <select class="form-select" aria-label="Default select example" name="item" onchange="func1(this)" >
+        <option selected value=0 data-qty="0"> Open this select menu</option> 
+        <% a.forEach(element => { %>
+          <% if ( element.quantity >0) { %>
+           <option value=<%=element.id%> data-qty=<%=element.quantity%>> <%=element.name%> </option>
+          <% } %>
+        <% }) %>
+      </select>
+      <span class="form-group">
+        <input type="number" class="form-control" id="qty"+<%=i%>  placeholder="Enter Qty" min="0" max="100" name="qty">
+      </span>
+      <% } %>
+    </div>
+  </form>
+<script>
+  function func1(a)
+  {
+  	let limit=parseInt(a.options[a.selectedIndex].dataset.qty);
+    let max_initial = 100;
+
+    if(limit < max_initial)
+    document.getElementById('qty').max=limit;
+    //console.log(document.getElementById('qty').max);
+  }
+</script>
+</div>
+</body>
+</html>

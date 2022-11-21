@@ -1,0 +1,24 @@
+<table class="table table-primary">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Cost Price</th>
+        <th scope="col">Selling Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+<% array.forEach(element => { %>
+    <% if (element.quantity>0) { %>
+        <tr>
+            <td><%= element.id %></td>
+            <td><%= element.name %></td>
+            <td><%= element.cost_price %></td>
+            <td><%= element.selling_price %></td>
+            <td><%= element.quantity %></td>
+        </tr>
+    <% } %>
+    <% }) %>
+</tbody>
+</table>

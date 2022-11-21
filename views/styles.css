@@ -1,0 +1,31 @@
+body
+{
+    height:100%;
+    margin-bottom: 1cm;
+}
+
+form
+{
+    margin-left:1cm;
+    margin-right: 1cm;
+}
+
+.form-select
+{
+    display:inline-block ;
+    margin-top: 2%;
+    width:50%;
+}
+
+#qty
+{
+    display:inline-block ;
+    width:15%;
+}
+
+#submit
+{
+    position:fixed;
+    bottom: 5%;
+    right: 5%;
+}

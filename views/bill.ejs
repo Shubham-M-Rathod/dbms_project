@@ -1,0 +1,34 @@
+<%- include('header') %>
+    <table class="table table-primary">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+    <% array.forEach(element => { %>
+        <% if (element.cost>0) { %>
+            <tr>
+                <td><%= element.id %></td>
+                <td><%= element.name %></td>
+                <td><%= element.cost %></td>
+            </tr>
+        <% } %>
+    <% }) %>
+</tbody>
+</table>
+    <h2 style="text-align: center ;">Total</h2>
+    <h4 style="text-align: center ;"><%= total %></h4>
+    <br><br><br>
+    <p style="font-style:italic; text-align: center ;">Thank You !</p>
+    <p style="font-style:italic; text-align: center ;">Visit Again !</p>
+    <br>
+</div>
+</body>
+</html>
+
+
+    
+    

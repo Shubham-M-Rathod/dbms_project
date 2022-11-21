@@ -1,0 +1,27 @@
+<%- include('header') %>
+<div class="table-responsive">
+<table class="table table-primary">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First_Name</th>
+        <th scope="col">Middle_Name</th>
+        <th scope="col">Last_Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+<% array.forEach(element => { %>
+        <tr>
+            <td><%= element.id %></td>
+            <td><%= element.firstname %></td>
+            <td><%= element.middlename %></td>
+            <td><%= element.lastname %></td>
+            <td><%= element.phone %></td>
+            <td><%= element.address %></td>
+        </tr>
+    <% }) %>
+</div>
+</body>
+</html>

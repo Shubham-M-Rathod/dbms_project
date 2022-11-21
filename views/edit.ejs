@@ -1,0 +1,28 @@
+<%- include('header') %>
+
+<%- include('display') %>
+<form action="/inventory", method="post">
+    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+    <div class="row">
+    <div class="col-6 col-lg-3">
+    <label for="exampleInputEmail1">Enter Item Name: </label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Item" list="items" name="items">
+    <datalist id="items">
+        <% array.forEach(element => { %>
+            <option value="<%=element.name%>"><%=element.id%></option>
+        <% }) %>
+    </datalist>
+    </div>
+    <div class="col-6 col-lg-3">
+    <label>Enter Cost Price: </label>
+    <input type="number" class="form-control" placeholder="Cost Price" min="0" max="100000" name="cp">
+    </div>
+    <div class="col-6 col-lg-3">
+    <label>Enter Selling Price: </label>
+    <input type="number" class="form-control" placeholder="Selling Price" min="0" max="100000" name="sp">
+    </div>
+    <div class="col-6 col-lg-3">
+    <label>Enter Qty: </label>
+    <input type="number" class="form-control" placeholder="Qty " min="0" max="100000" name="qty">
+    </div>
+</form>
